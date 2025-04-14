@@ -1,0 +1,8 @@
+SELECT
+ SUM(total) As [Total sales],
+ round(avg(total),2) AS [Average Sales],
+ max(total) AS [Maximum Sales],
+ min(total) As [Minimum Sales],
+ count(*) AS [Sales count]
+FROM
+ Invoice

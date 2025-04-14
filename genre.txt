@@ -1,0 +1,16 @@
+SELECT
+  t.TrackId AS "Track ID",
+  t.Name AS "Track Name",
+  t.Composer,
+  g.Name AS Genre
+FROM
+  Track AS t
+JOIN
+  Genre AS g ON t.GenreId = g.GenreId
+WHERE
+  t.TrackId NOT IN (
+    SELECT DISTINCT li.TrackId
+    FROM InvoiceLine AS li
+  )
+ORDER BY
+  t.Name;

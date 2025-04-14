@@ -1,0 +1,16 @@
+/*
+CREATE by sathish 
+CREATE date 04102025
+DESC: This QUERY displays all Customers FirstName LastName and Email Address
+*/
+
+SELECT
+ FirstName AS[Customer First Name],
+ LastName AS"Customer Last Name",
+ Email AS EMAIL 
+FROM
+ Customer
+ORDER BY 
+ FirstName ASC,
+ LastName DESC 
+LIMIT 10

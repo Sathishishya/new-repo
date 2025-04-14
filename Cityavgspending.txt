@@ -1,0 +1,9 @@
+SELECT
+  BillingCity AS City,
+  round(AVG(Total),2) AS AverageSpending
+FROM
+  Invoice
+GROUP BY
+  BillingCity
+ORDER BY
+  BillingCity;

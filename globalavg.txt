@@ -1,0 +1,10 @@
+SELECT
+ BillingCity,
+ AVG(total) AS [City Average],
+  (SELECT avg(total) from Invoice) AS [Global Average]
+FROM
+ Invoice
+Group BY
+ BillingCity
+ORDER BY
+ BillingCity

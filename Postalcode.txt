@@ -1,0 +1,9 @@
+SELECT
+  c.FirstName || ' ' || c.LastName AS [CustomerFullName],
+  SUBSTR(c.PostalCode, 1, 5) AS [StandardizedPostalCode]
+FROM
+  Customer AS c
+WHERE
+  c.Country = 'USA'
+ORDER BY
+  CustomerFullName;

@@ -1,0 +1,6 @@
+SELECT
+  c.LastName
+FROM
+  Customer AS c
+WHERE
+  c.LastName LIKE 'G%';

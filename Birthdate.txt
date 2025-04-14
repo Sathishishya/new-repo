@@ -1,0 +1,11 @@
+SELECT
+  FirstName,
+  LastName,
+  BirthDate,
+  strftime('%Y-%m-%d', BirthDate) AS [BirthDate No timecode],
+  CAST(
+    (strftime('%Y', 'now') - strftime('%Y', BirthDate)) -
+    (strftime('%m-%d', 'now') < strftime('%m-%d', BirthDate))
+  AS INTEGER) AS Age
+FROM
+  Employee;

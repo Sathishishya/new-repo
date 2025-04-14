@@ -1,0 +1,9 @@
+SELECT
+  InvoiceId AS "Invoice",
+  BillingCity AS "City Name"
+FROM
+  Invoice
+WHERE
+  BillingCity LIKE '%Brussels%'
+ORDER BY
+  InvoiceId;

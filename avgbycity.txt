@@ -1,0 +1,13 @@
+SELECT
+ BillingCity,
+ round(avg(total),2)
+FROM 
+ Invoice
+WHERE
+ BillingCity LIKE 'b%'
+GROUP BY
+ BillingCity
+HAVING
+ avg(total)>5
+ORDER BY
+ BillingCity

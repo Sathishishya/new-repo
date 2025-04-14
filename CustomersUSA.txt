@@ -1,0 +1,14 @@
+SELECT
+ FirstName,
+ LastName,
+ Address,
+ FirstName||' '|| LastName ||' '|| Address || ','|| City || ' '|| State|| ' '|| PostalCode AS "Mailing Address",
+ length(PostalCode),
+ substr(PostalCode,1,5) AS [5 Digit PostalCode],
+ UPPER(FirstName) AS [FirstName ALL caps],
+ lower(lastname) AS [LastName ALL lower]
+FROM
+ Customer
+WHERE
+ Country = 'USA'
+ 

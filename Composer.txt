@@ -1,0 +1,12 @@
+SELECT 
+  Name AS "Track Name",
+  Composer AS "COMPOSER",
+  UnitPrice AS "PRICE",
+  CASE
+    WHEN UnitPrice <= 0.99 THEN 'Budget'
+    WHEN UnitPrice BETWEEN 1.00 AND 1.49 THEN 'Regular'
+    WHEN UnitPrice BETWEEN 1.50 AND 1.99 THEN 'Premium'
+    ELSE 'Exclusive'
+  END AS PRICECATEGORY
+FROM Track
+ORDER BY PRICE;
